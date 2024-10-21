@@ -1,3 +1,5 @@
+import { useSyncExternalStore } from 'react';
+
 function DocumentVisible() {
   const isOnline = useSyncExternalStore(subscribeVisibilityChange, getCurrentVisibilityState);
   return isOnline === 'visible' ? true : false ;
